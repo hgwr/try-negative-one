@@ -16,4 +16,7 @@ public interface MemoRepository extends JpaRepository<Memo, Long> {
 
   @Query(value = "SELECT m FROM Memo m WHERE m.categoryId = ?1")
   List<Memo> findByCategoryId(Integer categoryId);
+
+  @Query(value = "SELECT m FROM Memo m WHERE m.categoryId = -1")
+  List<Memo> findByCategoryIdIsNegativeOne();
 }

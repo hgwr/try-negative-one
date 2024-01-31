@@ -55,4 +55,14 @@ public class MemoController {
     }
   }
 
+  @GetMapping("/category/negative-one")
+  public String getMemoByCategoryIsNegativeOne() {
+    List<Memo> memoList = memoRepository.findByCategoryIdIsNegativeOne();
+    if (!memoList.isEmpty()) {
+      return memoList.get(0).getContent();
+    } else {
+      return "Not found!";
+    }
+  }
+
 }
