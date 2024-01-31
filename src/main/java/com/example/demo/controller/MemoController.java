@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dao.entity.Memo;
 import com.example.demo.dao.repository.MemoRepository;
-import com.example.dto.MemoDto;
+import com.example.demo.dto.MemoDto;
 
 @RestController
 @RequestMapping("/memo")
